@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DairyFarm</string>
+    <string name="done" translatable="false">DairyFarm</string>
+    <string name="navigation_open" translatable="false">Open Navigation drawer></string>
+    <string name="navigation_close" translatable="false">Close Navigation drawer></string>
+
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProducerHomepage">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/green"
+            android:padding="10dp"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/contact"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/baloo"
+                android:padding="10dp"
+                android:text="Contact Us"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="528dp"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:paddingTop="20dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:clickable="false"
+                android:hint="Full Name"
+                android:tooltipText="Full Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profilename2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/name"
+                    android:drawablePadding="10dp"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:clickable="false"
+                android:hint="Email"
+                android:tooltipText="Email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profileemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="10dp"
+                    android:editable="false"
+
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:clickable="false"
+                android:hint="Phone Number"
+                android:tooltipText="Phone Number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profilephn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/phone"
+                    android:drawablePadding="10dp"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="false"
+                android:hint="Describe your issue here"
+                android:tooltipText="Phone Number"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20dp"
+                    android:drawablePadding="10dp"
+
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+        <Button
+            android:id="@+id/update"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:text="Submit"
+            app:layout_editor_absoluteY="620dp"
+            app:layout_editor_absoluteX="250dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
