@@ -189,24 +189,24 @@ public class ProducerHomepage extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
-        if(id==R.id.signout){
+        if(id==R.id.signoutprod){
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(ProducerHomepage.this,MainActivity.class));
             finish();
             return true;
         }
-        if(id==R.id.Terms){
+        if(id==R.id.Termsprod){
             Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://fitnik.tech/public/docs/terms.pdf"));
             startActivity(intent);
             return true;
         }
-        if(id==R.id.Contact){
+        if(id==R.id.Contactprod){
             startActivity(new Intent(ProducerHomepage.this,Contact_Us.class));
             return true;
         }
-        if(id==R.id.Lang){
-//            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=fitness%20apps&c=apps"));
-//            startActivity(intent);
+        if(id==R.id.Langprod){
+            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=fitness%20apps&c=apps"));
+            startActivity(intent);
 
             return true;
         }
