@@ -136,12 +136,16 @@
 
 
     </LinearLayout>
-        <Button
-            android:id="@+id/update"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
-            android:text="Submit"
-            app:layout_editor_absoluteY="620dp"
-            app:layout_editor_absoluteX="250dp"/>
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_editor_absoluteX="250dp"
+        app:layout_editor_absoluteY="620dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

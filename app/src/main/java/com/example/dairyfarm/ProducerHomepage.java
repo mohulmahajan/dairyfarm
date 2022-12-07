@@ -205,8 +205,8 @@ public class ProducerHomepage extends AppCompatActivity {
             return true;
         }
         if(id==R.id.Lang){
-            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=fitness%20apps&c=apps"));
-            startActivity(intent);
+//            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=fitness%20apps&c=apps"));
+//            startActivity(intent);
 
             return true;
         }
