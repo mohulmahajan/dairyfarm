@@ -93,7 +93,7 @@
         android:editable="true"
         android:text="Bio"
         android:textAlignment="center"
-        android:textSize="320dp"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"

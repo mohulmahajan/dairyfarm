@@ -103,7 +103,7 @@ public class Consumer_homepage extends AppCompatActivity {
             return true;
         }
         if(id==R.id.Terms){
-            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://fitnik.tech/public/docs/terms.pdf"));
+            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wto.org/english/thewto_e/procurement_e/terms_conditions_e.pdf"));
             startActivity(intent);
             return true;
         }
@@ -112,7 +112,7 @@ public class Consumer_homepage extends AppCompatActivity {
             return true;
         }
         if(id==R.id.Lang){
-            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=fitness%20apps&c=apps"));
+            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=dairy%20farm&c=apps"));
             startActivity(intent);
 
             return true;

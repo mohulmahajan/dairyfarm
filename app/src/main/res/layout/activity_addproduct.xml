@@ -8,15 +8,15 @@
     >
 
     <LinearLayout
-        android:layout_width="413dp"
-        android:layout_height="504dp"
+        android:layout_width="363dp"
+        android:layout_height="403dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <ListView
-            android:id="@+id/CityData"
+            android:id="@+id/ProdList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
@@ -29,7 +29,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/locationbtn"
+        android:id="@+id/addproductbtn"
         android:layout_width="124dp"
         android:layout_height="84dp"
         android:layout_marginEnd="4dp"
@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="77dp"
         android:background="@color/green"
@@ -52,7 +52,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Geographical location suitable for you?"
+            android:fontFamily="@font/baloo"
+            android:padding="15dp"
+            android:text="ADD PRODUCTS"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30dp" />
     </LinearLayout>

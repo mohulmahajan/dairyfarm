@@ -26,6 +26,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -40,6 +41,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -59,6 +61,7 @@ public class ProducerHomepage extends AppCompatActivity {
 
 
     public ProducerHomepage(){
+
         getDataProfile();
 
 
@@ -142,40 +145,34 @@ public class ProducerHomepage extends AppCompatActivity {
 
     }
     public void UpdateProfile(){
-        FirebaseFirestore db=FirebaseFirestore.getInstance();
-        db.collection("user")
-                .whereEqualTo("email",profileemail)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        String name=  binding.profilename2.getText().toString();
+        String phn= binding.profilephn.getText().toString();
+        DocumentReference documentReference=FirebaseFirestore.getInstance().collection("user")
+                .document(FirebaseAuth.getInstance().getCurrentUser().getEmail().toString());
 
+//        Map<String, Object> map = new HashMap<>();
+//        map.put("name","vaibhav");
+//        documentReference.update(map).addOnSuccessListener(new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void unused) {
+//                Toast.makeText(ProducerHomepage.this,"success",Toast.LENGTH_LONG).show();
+//                binding.profilename.setText(binding.profilename.getText());
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                Toast.makeText(ProducerHomepage.this,"failure",Toast.LENGTH_LONG).show();
+//            }
+//        });
+        documentReference.update("name",name,"phn",phn).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(ProducerHomepage.this,"success",Toast.LENGTH_LONG).show();
+                binding.profilename.setText(binding.profilename2.getText());
+                binding.profilename2.setText(binding.profilename2.getText());
+            }
+        });
 
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        abcd=queryDocumentSnapshots.getDocuments();
-                        for(DocumentSnapshot documentSnapshot:abcd) {
-
-
-                            String docId= documentSnapshot.getId();
-                            db.collection("user")
-                                    .document(docId)
-                                    .update(user2)
-                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void unused) {
-                                            Toast.makeText(ProducerHomepage.this,"Updated Successfully",Toast.LENGTH_LONG).show();
-                                        }
-                                    })
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-
-                                            Toast.makeText(ProducerHomepage.this,"Update Failed",Toast.LENGTH_LONG).show();
-                                        }
-                                    });
-
-                        }
-                    }
-                });
 
 
 
@@ -196,7 +193,7 @@ public class ProducerHomepage extends AppCompatActivity {
             return true;
         }
         if(id==R.id.Termsprod){
-            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://fitnik.tech/public/docs/terms.pdf"));
+            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wto.org/english/thewto_e/procurement_e/terms_conditions_e.pdf"));
             startActivity(intent);
             return true;
         }
@@ -205,13 +202,13 @@ public class ProducerHomepage extends AppCompatActivity {
             return true;
         }
         if(id==R.id.Langprod){
-            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=fitness%20apps&c=apps"));
+            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=dairy%20farm&c=apps"));
             startActivity(intent);
 
             return true;
         }
         if(id==R.id.updateproduct){
-//            startActivity(new Intent(ProducerHomepage.this,ProducerHomepage.class));
+            startActivity(new Intent(ProducerHomepage.this,Addproduct.class));
             return true;
         }
         return true;

@@ -6,6 +6,7 @@ public class Data {
     private static Data data = new Data();
     private String Delhi,Sonepat,Panipat,Karnal,Ambala,Panchkula;
     private String emailOnLogin;
+    private String Milk,paneer,curd,cheese,buttermilk,ghee;
 
     private Data() {
     }
@@ -84,6 +85,55 @@ public class Data {
 
     public void setEmailOnLogin(String emailOnLogin) {
         this.emailOnLogin = emailOnLogin;
+    }
+
+
+    public String getMilk() {
+        return Milk;
+    }
+
+    public void setMilk(String milk) {
+        Milk = milk;
+    }
+
+    public String getPaneer() {
+        return paneer;
+    }
+
+    public void setPaneer(String paneer) {
+        this.paneer = paneer;
+    }
+
+    public String getCurd() {
+        return curd;
+    }
+
+    public void setCurd(String curd) {
+        this.curd = curd;
+    }
+
+    public String getCheese() {
+        return cheese;
+    }
+
+    public void setCheese(String cheese) {
+        this.cheese = cheese;
+    }
+
+    public String getButtermilk() {
+        return buttermilk;
+    }
+
+    public void setButtermilk(String buttermilk) {
+        this.buttermilk = buttermilk;
+    }
+
+    public String getGhee() {
+        return ghee;
+    }
+
+    public void setGhee(String ghee) {
+        this.ghee = ghee;
     }
 }
 
