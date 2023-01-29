@@ -97,9 +97,9 @@ public class Consumer_homepage extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
         if(id==R.id.signout){
-           FirebaseAuth.getInstance().signOut();
-           startActivity(new Intent(Consumer_homepage.this,MainActivity.class));
-           finish();
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(Consumer_homepage.this,MainActivity.class));
+            finish();
             return true;
         }
         if(id==R.id.Terms){

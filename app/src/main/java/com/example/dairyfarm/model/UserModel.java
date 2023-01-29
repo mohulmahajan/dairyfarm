@@ -12,7 +12,7 @@ public class UserModel implements Serializable {
     private  String Loc;
     private String phn;
     private String Delhi,Sonepat,Panipat,Karnal,Ambala,Panchkula;
-//    private String password;
+    //    private String password;
     private ImageView image;
 
 

@@ -3,5 +3,25 @@
     <string name="done" translatable="false">DairyFarm</string>
     <string name="navigation_open" translatable="false">Open Navigation drawer></string>
     <string name="navigation_close" translatable="false">Close Navigation drawer></string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="email" translatable="false">Email Id</string>
+    <string name="passowrd" translatable="false">Password</string>
+    <string name="login" translatable="false">LOGIN</string>
+    <string name="show_pwd" translatable="false">Show Password</string>
+    <string name="hide_pwd" translatable="false">Hide Password</string>
+    <string name="forgot" translatable="false">Forgot password?</string>
+    <string name="closebutton" translatable="false">Close Button for Activity</string>
+    <string name="newUser" translatable="false">Not a Member yet? Sign Up here.</string>
+    <string name="fullName" translatable="false">Full Name</string>
+    <string name="mobileNumber" translatable="false">Mobile Number</string>
+    <string name="location" translatable="false">Location</string>
+    <string name="confirmPassword" translatable="false">Confirm Password</string>
+    <string name="terms_conditions" translatable="false">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp" translatable="false">SIGN UP</string>
+    <string name="already_user" translatable="false">Already have Account? Login here.</string>
+    <string name="registered_emailid" translatable="false">Please enter your Registered Email Id below:</string>
+    <string name="submit" translatable="false">SUBMIT</string>
+    <string name="back" translatable="false">BACK</string>
 
 </resources>

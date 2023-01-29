@@ -8,6 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#3D95DC</color>
-    <color name="green_light">#90EA7A</color>
+    <color name="green_light">#3D95DC</color>
+    <color name="background_color">#009688</color>
+<!--    <color name="white">#FFFFFF</color>-->
+<!--    <color name="black">#000000</color>-->
+    <color name="white_greyish">#EEEEEE</color>
+    <color name="button_selectorcolor">#9E9E9E</color>
 
 </resources>

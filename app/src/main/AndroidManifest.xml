@@ -16,6 +16,12 @@
         android:theme="@style/Theme.DairyFarm"
         tools:targetApi="31">
         <activity
+            android:name=".Prod_dealsin"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileTest"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -48,6 +49,42 @@ public class Addproduct extends AppCompatActivity {
         });
 
     }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.producer_option,menu);
+//        return true;
+//    }
+//    //  Method to decide the functionality of different options in the menu of the application.
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        int id=item.getItemId();
+//        if(id==R.id.signoutprod){
+//            FirebaseAuth.getInstance().signOut();
+//            startActivity(new Intent(Addproduct.this,MainActivity.class));
+//            finish();
+//            return true;
+//        }
+//        if(id==R.id.Termsprod){
+//            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wto.org/english/thewto_e/procurement_e/terms_conditions_e.pdf"));
+//            startActivity(intent);
+//            return true;
+//        }
+//        if(id==R.id.Contactprod){
+//            startActivity(new Intent(Addproduct.this,Contact_Us.class));
+//            return true;
+//        }
+//        if(id==R.id.Langprod){
+//            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=dairy%20farm&c=apps"));
+//            startActivity(intent);
+//
+//            return true;
+//        }
+//        if(id==R.id.updateproduct){
+//            startActivity(new Intent(Addproduct.this,Addproduct.class));
+//            return true;
+//        }
+//        return true;
+//    }
 
     public void getValue(){
 
@@ -56,17 +93,17 @@ public class Addproduct extends AppCompatActivity {
         if (Productlist.isItemChecked(i)) {
             items+= Productlist.getItemAtPosition(i) + ",";
         }}
-        if (Productlist.isItemChecked(1)){
+        if (Productlist.isItemChecked(0)){
             Milk="true";
-        }if (Productlist.isItemChecked(2)){
+        }if (Productlist.isItemChecked(1)){
             paneer="true";}
-        if (Productlist.isItemChecked(3)){
+        if (Productlist.isItemChecked(2)){
             curd="true";}
-        if (Productlist.isItemChecked(4)){
+        if (Productlist.isItemChecked(3)){
             cheese="true";}
-        if (Productlist.isItemChecked(5)){
+        if (Productlist.isItemChecked(4)){
             buttermilk="true";}
-        if (Productlist.isItemChecked(6)){
+        if (Productlist.isItemChecked(5)){
             ghee="true";}
 
         Data data=Data.getInstance();

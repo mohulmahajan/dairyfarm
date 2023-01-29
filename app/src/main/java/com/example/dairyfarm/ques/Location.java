@@ -69,24 +69,24 @@ public class Location extends AppCompatActivity {
             if (CityData.isItemChecked(i)) {
                 itemselected += CityData.getItemAtPosition(i) + ",";
             }}
-            if (CityData.isItemChecked(1)){
-                Delhi="true";
-            }
-            if (CityData.isItemChecked(2)){
-                Sonepat="true";
-            }
-            if (CityData.isItemChecked(3)){
-                Panipat="true";
-            }
-            if (CityData.isItemChecked(4)){
-                Karnal="true";
-            }
-            if (CityData.isItemChecked(5)){
-                Ambala="true";
-            }
-            if (CityData.isItemChecked(6)){
-                Panchkula="true";
-            }
+        if (CityData.isItemChecked(0)){
+            Delhi="true";
+        }
+        if (CityData.isItemChecked(1)){
+            Sonepat="true";
+        }
+        if (CityData.isItemChecked(2)){
+            Panipat="true";
+        }
+        if (CityData.isItemChecked(3)){
+            Karnal="true";
+        }
+        if (CityData.isItemChecked(4)){
+            Ambala="true";
+        }
+        if (CityData.isItemChecked(5)){
+            Panchkula="true";
+        }
 
 
 
@@ -109,19 +109,19 @@ public class Location extends AppCompatActivity {
 
     }
 
-        void addDetail () {
-            getValue();
-            Datasignup data1= Datasignup.getInstance();
-            Data data = Data.getInstance();
-            UserModel usermodel = new UserModel(data1.getName(),data1.getEmail(),data1.getPhn(),data.getA(),itemselected,data.getDelhi(),data.getSonepat(), data.getPanipat(), data.getKarnal(),data.getAmbala(),data.getPanchkula());
-            FirebaseFirestore.getInstance()
-                    .collection("user")
-                    .document(data1.getEmail())
-                    .set(usermodel);
+    void addDetail () {
+        getValue();
+        Datasignup data1= Datasignup.getInstance();
+        Data data = Data.getInstance();
+        UserModel usermodel = new UserModel(data1.getName(),data1.getEmail(),data1.getPhn(),data.getA(),itemselected,data.getDelhi(),data.getSonepat(), data.getPanipat(), data.getKarnal(),data.getAmbala(),data.getPanchkula());
+        FirebaseFirestore.getInstance()
+                .collection("user")
+                .document(data1.getEmail())
+                .set(usermodel);
 
-            startActivity(new Intent(Location.this,MainActivity.class));
-            finish();
-        }
+        startActivity(new Intent(Location.this,MainActivity.class));
+        finish();
+    }
 
     public void createAccount(String name, String email, String password) {
 
@@ -164,4 +164,4 @@ public class Location extends AppCompatActivity {
     }
 
 
-    }
+}

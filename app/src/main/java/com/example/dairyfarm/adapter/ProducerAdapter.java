@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dairyfarm.ProfilePage;
+import com.example.dairyfarm.ProfileTest;
 import com.example.dairyfarm.R;
 import com.example.dairyfarm.model.UserModel;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -56,12 +57,12 @@ public class ProducerAdapter extends RecyclerView.Adapter<ProducerAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         UserModel userModel=userlist.get(position);
         holder.Name.setText(userModel.getName());
-        holder.City.setText(userModel.getLoc());
+//        holder.City.setText(userModel.getLoc());
         holder.Products.setText("To Do");
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(context, ProfilePage.class);
+                Intent intent= new Intent(context, ProfileTest.class);
                 intent.putExtra("model",userModel);
                 context.startActivity(intent);
             }
