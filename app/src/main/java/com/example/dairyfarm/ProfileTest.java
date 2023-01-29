@@ -8,26 +8,33 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.dairyfarm.databinding.ActivityProfileTestBinding;
-import com.example.dairyfarm.databinding.ActivityProfilepageBinding;
 import com.example.dairyfarm.model.UserModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class ProfileTest extends AppCompatActivity {
 ActivityProfileTestBinding binding;
+String loc1;
+    List<DocumentSnapshot> abc;
+    UserModel pModel;
+    String Sonepat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,12 +49,15 @@ ActivityProfileTestBinding binding;
         });
 
         UserModel userModel=(UserModel) intent.getSerializableExtra("model");
-
         binding.userName.setText(userModel.getName());
         binding.Profilename.setText(userModel.getName());
         binding.profilephn.setText(userModel.getPhn());
         binding.profileemail.setText(userModel.getEmail());
-        binding.ProfileLoc.setText(userModel.getLoc());
+
+
+//        binding.ProfileLoc.setText(loc1);
+//        Log.d("loc",loc1);
+
         StorageReference storageReference= FirebaseStorage.getInstance().getReference("images/" + userModel.getEmail().toString());
         try {
             File localFile= File.createTempFile("tempFile",".jpg");

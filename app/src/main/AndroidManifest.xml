@@ -38,9 +38,6 @@
             android:exported="false"
             android:label="Profile" />
         <activity
-            android:name=".ques.LookingFor"
-            android:exported="false" />
-        <activity
             android:name=".ques.Location"
             android:exported="false" />
         <activity

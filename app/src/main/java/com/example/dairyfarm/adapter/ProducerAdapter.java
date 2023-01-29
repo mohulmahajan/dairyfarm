@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,9 +57,24 @@ public class ProducerAdapter extends RecyclerView.Adapter<ProducerAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         UserModel userModel=userlist.get(position);
+//        String locations="";
+//        if(userModel.getDelhi().toString()=="true"){
+//        locations += "delhi, ";
+//        }if(userModel.getSonepat().toString()=="true"){
+//        locations += "Sonepat, ";
+//        }if(userModel.getPanipat().toString()=="true"){
+//        locations += "Panipat, ";
+//        }if(userModel.getAmbala().toString()=="true"){
+//        locations += "Ambala, ";
+//        }if(userModel.getKarnal().toString()=="true"){
+//        locations += "karnal, ";
+//        }if(userModel.getPanchkula().toString()=="true"){
+//        locations += "Panchkula, ";
+//        }
+//        Log.d("loc",userModel.getDelhi().toString());
         holder.Name.setText(userModel.getName());
-//        holder.City.setText(userModel.getLoc());
-        holder.Products.setText("To Do");
+//        holder.City.setText(locations);
+//        holder.Products.setText("To Do");
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

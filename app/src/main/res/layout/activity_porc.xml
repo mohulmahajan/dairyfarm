@@ -3,61 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+
+    >
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:background="@color/green"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_width="353dp"
+        android:layout_height="370dp"
+        android:background="@drawable/shape2"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="You are?"
-            android:textSize="35dp"
-            android:textColor="@color/white"
-            android:paddingTop="10dp"
-            android:paddingLeft="30dp"
 
-            >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/green_light"
+            android:fontFamily="@font/baloo"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:text="You are?"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="35dp">
 
         </TextView>
 
 
+        <RadioGroup
+            android:id="@id/radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape2"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape2"
+                android:text="CONSUMER"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold">
+
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:background="@drawable/shape2"
+                android:text="PRODUCER"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </RadioGroup>
     </LinearLayout>
-
-    <RadioGroup
-        android:id="@id/radio"
-        android:layout_width="407dp"
-        android:layout_height="179dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_marginBottom="50dp"
-            android:text="CONSUMER"
-            android:textSize="35dp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:text="PRODUCER"
-            android:textSize="35dp"
-            android:textStyle="bold" />
-    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

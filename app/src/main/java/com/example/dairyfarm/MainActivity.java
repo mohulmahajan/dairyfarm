@@ -133,8 +133,6 @@ public class MainActivity extends AppCompatActivity {
             //for consumer
             else if (pcvalue == 1) {
                 startActivity(new Intent(MainActivity.this, Consumer_homepage.class));
-            } else {
-                Log.d("my", "error");
             }
 
         }

@@ -8,70 +8,97 @@
     android:padding="10dp"
     android:orientation="vertical"
     >
-    <TextView
-        android:layout_marginTop="30dp"
-        android:textColor="@color/green"
-        android:textSize="40sp"
-        android:text="Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:background="@drawable/shape">-->
 
-    </TextView>
-    <androidx.cardview.widget.CardView
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_margin="1dp"
-        android:layout_width="match_parent"
+    <!--    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        app:cardElevation="5dp"
-        >
-        <EditText
-            android:id="@+id/email"
-            android:hint="E-Mail"
-            android:background="@drawable/edittext_bg"
-            android:padding="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_margin="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="5dp"
-        >
-
-    </androidx.cardview.widget.CardView>
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_bg"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="15dp" />
-
-    <TextView
-        android:id="@+id/goToSignup"
-        android:padding="3dp"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/green"
-        android:text="New User? create account "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-
-        />
-    <Button
-        android:id="@+id/login"
-        android:text="Lets Go!"
-        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:background="@drawable/shape2"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            ></TextView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            >
+            <EditText
+                android:drawableLeft="@drawable/email"
+                android:id="@+id/email"
+                android:hint="  E-Mail"
+                android:background="@drawable/edittext_bg"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            android:layout_marginBottom="10dp"
+            >
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/password"
+            android:drawableLeft="@drawable/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:hint="  Password"
+            android:inputType="textPassword"
+            android:padding="15dp" />
+
+        <TextView
+            android:id="@+id/goToSignup"
+            android:padding="3dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="New User? create account "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape2"
 
 
+            />
+        <Button
+            android:id="@+id/login"
+            android:text="Lets Go!"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:outlineProvider="background"
+            android:background="@drawable/shape3"
+
+            android:layout_margin="20dp"
+            />
+
+    </LinearLayout>
 </LinearLayout>

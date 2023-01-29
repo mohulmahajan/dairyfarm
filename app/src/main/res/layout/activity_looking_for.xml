@@ -1,72 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    tools:context=".ques.LookingFor"
+    android:padding="10dp"
+    android:orientation="vertical"
+    >
     <LinearLayout
-        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:background="@color/green"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_height="100dp"
+        android:background="@drawable/shape">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Looking For?"
-            android:textSize="35dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
+            android:text="Login"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:paddingTop="10dp"
-            android:paddingLeft="30dp"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape2"
+        android:padding="10dp">
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        >
+        <EditText
+            android:drawableLeft="@drawable/email"
+            android:id="@+id/email"
+            android:hint="  E-Mail"
+            android:background="@drawable/edittext_bg"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </androidx.cardview.widget.CardView>
 
-            >
+    <androidx.cardview.widget.CardView
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        android:layout_marginBottom="10dp"
+        >
 
-        </TextView>
+    </androidx.cardview.widget.CardView>
 
+    <EditText
+        android:id="@+id/password"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bg"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="15dp" />
+
+    <TextView
+        android:id="@+id/goToSignup"
+        android:padding="3dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:text="New User? create account "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape2"
+
+
+        />
+    <Button
+        android:id="@+id/login"
+        android:text="Lets Go!"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:outlineProvider="background"
+        android:background="@drawable/shape3"
+
+        android:layout_margin="20dp"
+        />
 
     </LinearLayout>
-
-    <RadioGroup
-        android:layout_width="407dp"
-        android:layout_height="179dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="390dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="50dp"
-            android:text="CONSUMER"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="PRODUCER"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/Lookingbtn"
-        android:layout_width="124dp"
-        android:layout_height="84dp"
-        android:text="NEXT"
-        app:icon="@drawable/ic_back_animated"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"></Button>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
