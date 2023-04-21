@@ -77,7 +77,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""
-                        android:textSize="27dp"
+                        android:textSize="10dp"
                         android:textColor="#2196F3"
                         android:textStyle="bold"
                         android:id="@+id/ProfileLoc"/>
@@ -115,9 +115,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:text="Deals In"
                         android:textSize="17dp"
                         android:textColor="#000"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_chevron_right_24"
+
+                        >
+
+                    </ImageView>
 
 
                 </LinearLayout>

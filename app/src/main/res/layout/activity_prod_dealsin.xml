@@ -41,7 +41,8 @@
                     android:text="Tips and diet"
                     android:textColor="#fff"
                     android:textStyle="bold"
-                    android:textSize="20.0dp"/>
+                    android:textSize="20.0dp"
+                    android:id="@+id/abc"/>
 
 
             </androidx.appcompat.widget.Toolbar>
@@ -54,6 +55,7 @@
         android:layout_marginTop="5.0dp"
         android:layout_below="@+id/linear"
         >
+
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"

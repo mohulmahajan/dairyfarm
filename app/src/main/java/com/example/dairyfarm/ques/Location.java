@@ -30,7 +30,7 @@ public class Location extends AppCompatActivity {
     ListView CityData;
     ArrayAdapter<String> adapter;
     String[] arrayPeliculas = {"Delhi", "Sonepat", "Panipat", "Karnal", "Ambala", "Panchkula"};
-    String itemselected;
+    String itemselected="";
 
     String Delhi="",Sonepat="",Panipat="",Karnal="",Ambala="",Panchkula="";
 
@@ -64,7 +64,7 @@ public class Location extends AppCompatActivity {
 
 
     public void getValue(){
-        itemselected = "";
+
         for (int i = 0; i < CityData.getCount(); i++) {
             if (CityData.isItemChecked(i)) {
                 itemselected += CityData.getItemAtPosition(i) + ",";
@@ -113,7 +113,7 @@ public class Location extends AppCompatActivity {
         getValue();
         Datasignup data1= Datasignup.getInstance();
         Data data = Data.getInstance();
-        UserModel usermodel = new UserModel(data1.getName(),data1.getEmail(),data1.getPhn(),data.getA(),itemselected,data.getDelhi(),data.getSonepat(), data.getPanipat(), data.getKarnal(),data.getAmbala(),data.getPanchkula());
+        UserModel usermodel = new UserModel(data1.getName(),data1.getEmail(),data1.getPhn(),data.getA(),data.getB(),data.getDelhi(),data.getSonepat(), data.getPanipat(), data.getKarnal(),data.getAmbala(),data.getPanchkula());
         FirebaseFirestore.getInstance()
                 .collection("user")
                 .document(data1.getEmail())

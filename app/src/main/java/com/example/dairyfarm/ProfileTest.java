@@ -12,9 +12,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.dairyfarm.databinding.ActivityProfileTestBinding;
+import com.example.dairyfarm.model.ProductModel;
 import com.example.dairyfarm.model.UserModel;
+import com.example.dairyfarm.ques.Data;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,8 +36,9 @@ public class ProfileTest extends AppCompatActivity {
 ActivityProfileTestBinding binding;
 String loc1;
     List<DocumentSnapshot> abc;
-    UserModel pModel;
+    UserModel userModel;
     String Sonepat;
+    ProductModel productModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,12 +46,42 @@ String loc1;
         setContentView(binding.getRoot());
         Intent intent=getIntent();
         binding.DealsInProfile.setOnClickListener(new View.OnClickListener() {
+            UserModel userModel=(UserModel) intent.getSerializableExtra("model");
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ProfileTest.this,Prod_dealsin.class));
+
+            FirebaseFirestore.getInstance()
+                    .collection("product")
+                    .whereEqualTo("email",userModel.getEmail() )
+                    .get()
+
+
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                            abc=queryDocumentSnapshots.getDocuments();
+                            for (DocumentSnapshot documentSnapshot:abc){
+                                productModel=documentSnapshot.toObject(ProductModel.class);
+                            }
+                            startActivity(new Intent(ProfileTest.this,Prod_dealsin.class));
+                            Log.d("abc", String.valueOf(productModel.getMilk()));
+                            Data data = Data.getInstance();
+                            data.setMilk(productModel.getMilk());
+                            data.setCheese(productModel.getCheese());
+                            data.setCurd(productModel.getCurd());
+                            data.setButtermilk(productModel.getButtermilk());
+                            data.setGhee(productModel.getGhee());
+                            data.setPaneer(productModel.getPaneer());
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(ProfileTest.this, "error", Toast.LENGTH_SHORT).show();
+                        }
+                    });
             }
         });
-
         UserModel userModel=(UserModel) intent.getSerializableExtra("model");
         binding.userName.setText(userModel.getName());
         binding.Profilename.setText(userModel.getName());
@@ -55,7 +89,7 @@ String loc1;
         binding.profileemail.setText(userModel.getEmail());
 
 
-//        binding.ProfileLoc.setText(loc1);
+        binding.ProfileLoc.setText(userModel.getLoc());
 //        Log.d("loc",loc1);
 
         StorageReference storageReference= FirebaseStorage.getInstance().getReference("images/" + userModel.getEmail().toString());

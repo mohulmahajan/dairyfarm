@@ -26,7 +26,7 @@ public class Addproduct extends AppCompatActivity {
     String[] arr = {"Milk", "paneer", "curd", "cheese", "buttermilk", "ghee"};
     String items;
 
-    String Milk = "", paneer = "", curd = "", cheese = "", buttermilk = "", ghee = "";
+    int Milk , paneer , curd, cheese, buttermilk , ghee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,17 +94,17 @@ public class Addproduct extends AppCompatActivity {
             items+= Productlist.getItemAtPosition(i) + ",";
         }}
         if (Productlist.isItemChecked(0)){
-            Milk="true";
+            Milk=1;
         }if (Productlist.isItemChecked(1)){
-            paneer="true";}
+            paneer=1;}
         if (Productlist.isItemChecked(2)){
-            curd="true";}
+            curd=1;}
         if (Productlist.isItemChecked(3)){
-            cheese="true";}
+            cheese=1;}
         if (Productlist.isItemChecked(4)){
-            buttermilk="true";}
+            buttermilk=1;}
         if (Productlist.isItemChecked(5)){
-            ghee="true";}
+            ghee=1;}
 
         Data data=Data.getInstance();
         data.setMilk(Milk);
@@ -161,7 +161,7 @@ public class Addproduct extends AppCompatActivity {
 
     public void Add(){
         Data data=Data.getInstance();
-        ProductModel productModel=new ProductModel(data.getMilk(),data.getPaneer(),data.getCurd(),data.getCheese(),data.getButtermilk(),data.getGhee());
+        ProductModel productModel=new ProductModel(FirebaseAuth.getInstance().getCurrentUser().getEmail(),data.getMilk(),data.getPaneer(),data.getCurd(),data.getButtermilk(),data.getGhee(),data.getCheese());
         FirebaseFirestore.getInstance()
                 .collection("product")
                 .document(FirebaseAuth.getInstance().getCurrentUser().getEmail().toString())

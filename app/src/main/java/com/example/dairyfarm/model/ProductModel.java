@@ -3,66 +3,75 @@ package com.example.dairyfarm.model;
 import java.io.Serializable;
 
 public class ProductModel implements Serializable {
-    private String Milk,paneer,curd,cheese,buttermilk,ghee;
-
+    private String email = "";
+    private int Milk, paneer, curd, buttermilk, ghee,cheese;
 
     public ProductModel() {
     }
 
-    public ProductModel(String milk, String paneer, String curd, String cheese, String buttermilk, String ghee) {
+    public ProductModel(String email, int milk, int paneer, int curd, int buttermilk, int ghee, int cheese) {
+        this.email = email;
         Milk = milk;
         this.paneer = paneer;
         this.curd = curd;
-        this.cheese = cheese;
         this.buttermilk = buttermilk;
         this.ghee = ghee;
+        this.cheese = cheese;
     }
 
-    public String getMilk() {
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getMilk() {
         return Milk;
     }
 
-    public void setMilk(String milk) {
+    public void setMilk(int milk) {
         Milk = milk;
     }
 
-    public String getPaneer() {
+    public int getPaneer() {
         return paneer;
     }
 
-    public void setPaneer(String paneer) {
+    public void setPaneer(int paneer) {
         this.paneer = paneer;
     }
 
-    public String getCurd() {
+    public int getCurd() {
         return curd;
     }
 
-    public void setCurd(String curd) {
+    public void setCurd(int curd) {
         this.curd = curd;
     }
 
-    public String getCheese() {
-        return cheese;
-    }
-
-    public void setCheese(String cheese) {
-        this.cheese = cheese;
-    }
-
-    public String getButtermilk() {
+    public int getButtermilk() {
         return buttermilk;
     }
 
-    public void setButtermilk(String buttermilk) {
+    public void setButtermilk(int buttermilk) {
         this.buttermilk = buttermilk;
     }
 
-    public String getGhee() {
+    public int getGhee() {
         return ghee;
     }
 
-    public void setGhee(String ghee) {
+    public void setGhee(int ghee) {
         this.ghee = ghee;
+    }
+
+    public int getCheese() {
+        return cheese;
+    }
+
+    public void setCheese(int cheese) {
+        this.cheese = cheese;
     }
 }

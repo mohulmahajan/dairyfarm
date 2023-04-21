@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-//        used to reference another page
+
 
 
         binding=ActivityMainBinding.inflate(getLayoutInflater());

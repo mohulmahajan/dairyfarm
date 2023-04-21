@@ -27,11 +27,13 @@ public class UserModel implements Serializable {
 //    }
 
 
-    public UserModel(String name, String email,  String phn,int pc,String loc, String delhi, String sonepat, String panipat, String karnal, String ambala, String panchkula) {
+
+
+    public UserModel(String name, String email, String phn, int pc, String loc, String delhi, String sonepat, String panipat, String karnal, String ambala, String panchkula) {
         Name = name;
         Email = email;
         Pc = pc;
-        loc=loc;
+        Loc=loc;
         this.phn = phn;
         Delhi = delhi;
         Sonepat = sonepat;

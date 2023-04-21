@@ -6,7 +6,7 @@ public class Data {
     private static Data data = new Data();
     private String Delhi,Sonepat,Panipat,Karnal,Ambala,Panchkula;
     private String emailOnLogin;
-    private String Milk,paneer,curd,cheese,buttermilk,ghee;
+    private int Milk,paneer,curd,cheese,buttermilk,ghee;
 
     private Data() {
     }
@@ -88,51 +88,59 @@ public class Data {
     }
 
 
-    public String getMilk() {
+    public static Data getData() {
+        return data;
+    }
+
+    public static void setData(Data data) {
+        Data.data = data;
+    }
+
+    public int getMilk() {
         return Milk;
     }
 
-    public void setMilk(String milk) {
+    public void setMilk(int milk) {
         Milk = milk;
     }
 
-    public String getPaneer() {
+    public int getPaneer() {
         return paneer;
     }
 
-    public void setPaneer(String paneer) {
+    public void setPaneer(int paneer) {
         this.paneer = paneer;
     }
 
-    public String getCurd() {
+    public int getCurd() {
         return curd;
     }
 
-    public void setCurd(String curd) {
+    public void setCurd(int curd) {
         this.curd = curd;
     }
 
-    public String getCheese() {
+    public int getCheese() {
         return cheese;
     }
 
-    public void setCheese(String cheese) {
+    public void setCheese(int cheese) {
         this.cheese = cheese;
     }
 
-    public String getButtermilk() {
+    public int getButtermilk() {
         return buttermilk;
     }
 
-    public void setButtermilk(String buttermilk) {
+    public void setButtermilk(int buttermilk) {
         this.buttermilk = buttermilk;
     }
 
-    public String getGhee() {
+    public int getGhee() {
         return ghee;
     }
 
-    public void setGhee(String ghee) {
+    public void setGhee(int ghee) {
         this.ghee = ghee;
     }
 }
