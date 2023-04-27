@@ -1,5 +1,7 @@
 package com.example.dairyfarm.adapter;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -18,10 +20,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.dairyfarm.ProfilePage;
 import com.example.dairyfarm.ProfileTest;
 import com.example.dairyfarm.R;
+import com.example.dairyfarm.model.ProductModel;
 import com.example.dairyfarm.model.UserModel;
+import com.example.dairyfarm.ques.Data;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -36,6 +43,7 @@ public class ProducerAdapter extends RecyclerView.Adapter<ProducerAdapter.MyView
     private Context context;
     private List<UserModel> userlist;
     StorageReference storageReference;
+    ProductModel productModel;
     public ProducerAdapter(Context context) {
         userlist=new ArrayList<>();
         this.context = context;
@@ -72,9 +80,29 @@ public class ProducerAdapter extends RecyclerView.Adapter<ProducerAdapter.MyView
 //        locations += "Panchkula, ";
 //        }
 //        Log.d("loc",userModel.getDelhi().toString());
+
+        FirebaseFirestore.getInstance().collection("product").whereEqualTo("email",FirebaseAuth.getInstance().getCurrentUser().getEmail())
+                .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        List<DocumentSnapshot> documentSnapshotList=queryDocumentSnapshots.getDocuments();
+                        for(DocumentSnapshot ds:documentSnapshotList){
+                            productModel=ds.toObject(ProductModel.class);
+//                            Data data = Data.getInstance();
+//                            data.setItems(productModel.getItems());
+                            Log.d("product",productModel.getItems());
+                        }}
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                       Log.d("error","product");
+                    }
+                });
+
+//        Data data= Data.getInstance();
         holder.Name.setText(userModel.getName());
-//        holder.City.setText(locations);
-//        holder.Products.setText("To Do");
+        holder.City.setText(userModel.getLoc());
+//        holder.Products.setText( productModel.getItems());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,7 +125,7 @@ public class ProducerAdapter extends RecyclerView.Adapter<ProducerAdapter.MyView
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Failed", LENGTH_SHORT).show();
                         }
                     });
         } catch (IOException e) {

@@ -17,7 +17,9 @@ import android.view.View;
 
 import com.example.dairyfarm.adapter.ProducerAdapter;
 import com.example.dairyfarm.databinding.ActivityHomepageBinding;
+import com.example.dairyfarm.model.ProductModel;
 import com.example.dairyfarm.model.UserModel;
+import com.example.dairyfarm.ques.Data;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
@@ -127,6 +129,8 @@ public class Consumer_homepage extends AppCompatActivity {
 
 
     private void getProducers() {
+
+
         FirebaseFirestore.getInstance()
                 .collection("user")
                 .whereEqualTo("pc",2)
@@ -140,6 +144,7 @@ public class Consumer_homepage extends AppCompatActivity {
                             producerAdapter.addProducer(userModel);
 
                         }
+
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -148,6 +153,7 @@ public class Consumer_homepage extends AppCompatActivity {
 
                     }
                 });
+
 
     }
 }

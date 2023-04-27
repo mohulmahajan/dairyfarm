@@ -71,25 +71,26 @@ ActivityProdDealsinBinding binding;
 
             }
         });
-        getvalue();
+//        getvalue();
+
+
+        binding.Milk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
-    public void getvalue(){
-        Data data= Data.getInstance();
-        if (data.getMilk()==1){Milk="MILK";}
-        if (data.getCheese()==1){cheese="CHEESE";}
-        if (data.getCurd()==1){curd="CURD";}
-        if (data.getButtermilk()==1){buttermilk="BUTTERMILK";}
-        if (data.getPaneer()==1){paneer="PANEER";}
-        if (data.getGhee()==1){ghee="GHEE";}
-        abcde= (Milk + cheese + curd + buttermilk + paneer + ghee);
-        binding.abc.setText(abcde);
-
-        
-
-
-
-
-    }
+//    public void getvalue(){
+//        Data data= Data.getInstance();
+//        if (data.getMilk()==1){Milk="MILK";}
+//        if (data.getCheese()==1){cheese="CHEESE";}
+//        if (data.getCurd()==1){curd="CURD";}
+//        if (data.getButtermilk()==1){buttermilk="BUTTERMILK";}
+//        if (data.getPaneer()==1){paneer="PANEER";}
+//        if (data.getGhee()==1){ghee="GHEE";}
+//        abcde= (Milk + cheese + curd + buttermilk + paneer + ghee);
+//    }
 
 
 }

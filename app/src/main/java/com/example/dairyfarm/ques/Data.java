@@ -7,7 +7,7 @@ public class Data {
     private String Delhi,Sonepat,Panipat,Karnal,Ambala,Panchkula;
     private String emailOnLogin;
     private int Milk,paneer,curd,cheese,buttermilk,ghee;
-
+    private String items;
     private Data() {
     }
 
@@ -94,6 +94,14 @@ public class Data {
 
     public static void setData(Data data) {
         Data.data = data;
+    }
+
+    public String getItems() {
+        return items;
+    }
+
+    public void setItems(String items) {
+        this.items = items;
     }
 
     public int getMilk() {

@@ -161,7 +161,7 @@ public class Addproduct extends AppCompatActivity {
 
     public void Add(){
         Data data=Data.getInstance();
-        ProductModel productModel=new ProductModel(FirebaseAuth.getInstance().getCurrentUser().getEmail(),data.getMilk(),data.getPaneer(),data.getCurd(),data.getButtermilk(),data.getGhee(),data.getCheese());
+        ProductModel productModel=new ProductModel(FirebaseAuth.getInstance().getCurrentUser().getEmail(),data.getMilk(),data.getPaneer(),data.getCurd(),data.getButtermilk(),data.getGhee(),data.getCheese(),items);
         FirebaseFirestore.getInstance()
                 .collection("product")
                 .document(FirebaseAuth.getInstance().getCurrentUser().getEmail().toString())
