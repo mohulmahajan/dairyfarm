@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.dairyfarm.cart.Milk;
 import com.example.dairyfarm.databinding.ActivityProdDealsinBinding;
 import com.example.dairyfarm.model.ProductModel;
 import com.example.dairyfarm.model.UserModel;
@@ -29,7 +30,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.List;
 
 public class Prod_dealsin extends AppCompatActivity {
-ActivityProdDealsinBinding binding;
+    ActivityProdDealsinBinding binding;
     List<DocumentSnapshot> abcd;
     ProductModel productModel;
     List<DocumentSnapshot> abc;
@@ -77,7 +78,44 @@ ActivityProdDealsinBinding binding;
         binding.Milk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(Prod_dealsin.this, com.example.dairyfarm.cart.Milk.class));
 
+            }
+        });binding.butter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Prod_dealsin.this, com.example.dairyfarm.cart.butter.class));
+
+            }
+        });binding.buttermilk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Prod_dealsin.this, com.example.dairyfarm.cart.Buttermilk.class));
+
+            }
+        });binding.cheese.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Prod_dealsin.this, com.example.dairyfarm.cart.Cheese.class));
+
+            }
+        });binding.curd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Prod_dealsin.this, com.example.dairyfarm.cart.Curd.class));
+
+            }
+        });binding.paneer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Prod_dealsin.this, com.example.dairyfarm.cart.Paneer.class));
+
+            }
+        });
+        binding.button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Prod_dealsin.this, com.example.dairyfarm.cart.Cart.class));
             }
         });
     }

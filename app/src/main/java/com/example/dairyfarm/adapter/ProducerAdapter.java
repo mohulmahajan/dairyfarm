@@ -95,7 +95,7 @@ public class ProducerAdapter extends RecyclerView.Adapter<ProducerAdapter.MyView
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                       Log.d("error","product");
+//                       Log.d("error","product");
                     }
                 });
 
@@ -125,7 +125,7 @@ public class ProducerAdapter extends RecyclerView.Adapter<ProducerAdapter.MyView
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(context, "Failed", LENGTH_SHORT).show();
+//                            Toast.makeText(context, "Failed", LENGTH_SHORT).show();
                         }
                     });
         } catch (IOException e) {

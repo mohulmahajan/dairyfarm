@@ -8,6 +8,7 @@ public class Data {
     private String emailOnLogin;
     private int Milk,paneer,curd,cheese,buttermilk,ghee;
     private String items;
+    private  int butterqt=0,buttermilkqt=0,cheeseqt=0,curdqt=0,milkqt=0,paneerqt=0;
     private Data() {
     }
 
@@ -150,5 +151,54 @@ public class Data {
 
     public void setGhee(int ghee) {
         this.ghee = ghee;
+    }
+
+
+    public int getButterqt() {
+        return butterqt;
+    }
+
+    public void setButterqt(int butterqt) {
+        this.butterqt = butterqt;
+    }
+
+    public int getButtermilkqt() {
+        return buttermilkqt;
+    }
+
+    public void setButtermilkqt(int buttermilkqt) {
+        this.buttermilkqt = buttermilkqt;
+    }
+
+    public int getCheeseqt() {
+        return cheeseqt;
+    }
+
+    public void setCheeseqt(int cheeseqt) {
+        this.cheeseqt = cheeseqt;
+    }
+
+    public int getCurdqt() {
+        return curdqt;
+    }
+
+    public void setCurdqt(int curdqt) {
+        this.curdqt = curdqt;
+    }
+
+    public int getMilkqt() {
+        return milkqt;
+    }
+
+    public void setMilkqt(int milkqt) {
+        this.milkqt = milkqt;
+    }
+
+    public int getPaneerqt() {
+        return paneerqt;
+    }
+
+    public void setPaneerqt(int paneerqt) {
+        this.paneerqt = paneerqt;
     }
 }

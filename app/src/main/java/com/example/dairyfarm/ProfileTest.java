@@ -64,14 +64,14 @@ String loc1;
                                 productModel=documentSnapshot.toObject(ProductModel.class);
                             }
                             startActivity(new Intent(ProfileTest.this,Prod_dealsin.class));
-                            Log.d("abc", String.valueOf(productModel.getMilk()));
-                            Data data = Data.getInstance();
-                            data.setMilk(productModel.getMilk());
-                            data.setCheese(productModel.getCheese());
-                            data.setCurd(productModel.getCurd());
-                            data.setButtermilk(productModel.getButtermilk());
-                            data.setGhee(productModel.getGhee());
-                            data.setPaneer(productModel.getPaneer());
+//                            Log.d("abc", String.valueOf(productModel.getMilk()));
+//                            Data data = Data.getInstance();
+//                            data.setMilk(productModel.getMilk());
+//                            data.setCheese(productModel.getCheese());
+//                            data.setCurd(productModel.getCurd());
+//                            data.setButtermilk(productModel.getButtermilk());
+//                            data.setGhee(productModel.getGhee());
+//                            data.setPaneer(productModel.getPaneer());
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

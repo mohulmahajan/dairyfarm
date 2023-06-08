@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable-v24/ic_baseline_keyboard_arrow_left_24.xml" value="0.131" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.131" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable/arrowleft.xml" value="0.1085" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable/edittext_bg.xml" value="0.123" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable/email.xml" value="0.1035" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable/ic_baseline_chevron_right_24.xml" value="0.1085" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.131" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.131" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable/ic_channel_foreground.xml" value="0.131" />
@@ -20,7 +22,12 @@
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable/shape3.xml" value="0.131" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/drawable/text_selector.xml" value="0.131" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_addproduct.xml" value="0.17066666666666666" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_butter.xml" value="0.17297297297297298" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_buttermilk.xml" value="0.17297297297297298" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_cart.xml" value="0.17297297297297298" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_cheese.xml" value="0.17297297297297298" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_contact_us.xml" value="0.15" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_curd.xml" value="0.17297297297297298" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_homepage.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_location.xml" value="0.15" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_login_layout.xml" value="0.17297297297297298" />
@@ -28,7 +35,9 @@
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_lookingfor.xml" value="0.2" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_main2.xml" value="0.15" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_milk.xml" value="0.17297297297297298" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_otp.xml" value="0.22" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_paneer.xml" value="0.17297297297297298" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_phomepage.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_porc.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_prod_dealsin.xml" value="0.17297297297297298" />
@@ -40,12 +49,13 @@
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_sign_up.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_signup_layout.xml" value="0.17297297297297298" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/activity_splash_screen.xml" value="0.17297297297297298" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/cartlist.xml" value="0.22" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/city_layout.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/custom_toast.xml" value="0.17207207207207206" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/forgotpassword_layout.xml" value="0.17207207207207206" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/layout.xml" value="0.1" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/login_layout.xml" value="0.2" />
-        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/producer_list.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/producer_list.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/shape.xml" value="0.17207207207207206" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/layout/signup_layout.xml" value="0.17207207207207206" />
         <entry key="..\:/Users/mohul/AndroidStudioProjects/DairyFarm/app/src/main/res/menu/main_menu.xml" value="0.2" />

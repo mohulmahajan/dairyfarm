@@ -37,6 +37,8 @@ public class Consumer_homepage extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    List list;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
